@@ -1,4 +1,4 @@
-# RockPaperScissors-Project-By-Deyan
+# RockPaperScissors School Project By Deyan
 This is a simple console based implementation of the classic Rock-Paper-Scissors game written in C#.
 
 How to play:
