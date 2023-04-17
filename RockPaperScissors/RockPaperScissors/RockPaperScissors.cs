@@ -1,4 +1,5 @@
-﻿int score = 0;
+﻿int playerScore = 0;
+int pcScore = 0;
 bool playAgain = true;
 while (playAgain)
 {
@@ -108,11 +109,11 @@ while (playAgain)
     {
         case "won":
             Console.ForegroundColor = ConsoleColor.Green;
-            score += 1;
+            playerScore += 1;
             break;
-        case "lose":
+        case "lost":
             Console.ForegroundColor = ConsoleColor.Red;
-            score -= 1;
+            pcScore += 1;
             break;
         case "draw":
             Console.ForegroundColor = ConsoleColor.Yellow;
@@ -121,12 +122,24 @@ while (playAgain)
             Console.ResetColor();
             break;
     }
-    string ending = "";
-    if (score > 1)
+    string playerEnding = "";
+    string pcEnding = "";
+    if (playerScore > 1 || playerScore == 0)
     {
-        ending = "s";
+        playerEnding = "s";
     }
-    Console.WriteLine($"You have won {score} time{ending}.");
+    if (pcScore > 1 || pcScore == 0)
+    {
+        pcEnding = "s";
+    }
+    if (playerScore >= 0)
+    {
+        Console.WriteLine($"You have won {playerScore} time{playerEnding} and the machine has won {pcScore} time{pcEnding}.");
+    }
+    else
+    {
+        Console.WriteLine($"You haven't won so far but the machine has won {pcScore} time{pcEnding}.");
+    }
     Console.ForegroundColor = ConsoleColor.Blue;
     Console.WriteLine("Do you want to play again (Yes or No)");
     string input = Console.ReadLine();
