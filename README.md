@@ -2,7 +2,7 @@
 This is a simple console based implementation of the classic Rock-Paper-Scissors game written in C#.
 
 ## Live Demo:
-
+https://replit.com/@deo08mine/RockPaperScissors#Main.cs
 ## How to play:
 1. Run the application in a console.
 2. Follow the on-screen instructions to choose your move
