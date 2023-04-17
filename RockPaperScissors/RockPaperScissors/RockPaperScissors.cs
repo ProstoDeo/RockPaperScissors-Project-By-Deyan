@@ -1,7 +1,9 @@
 ﻿string Rock = "Rock";
 string Paper = "Paper";
 string Scissors = "Scissors";
+Console.ForegroundColor = ConsoleColor.Blue;
 Console.WriteLine("Choose [r]ock, [p]aper or [s]cissors: ");
+Console.ForegroundColor = ConsoleColor.White;
 string playerMove = Console.ReadLine();
 switch (playerMove)
 {
@@ -43,12 +45,15 @@ switch (playerMove)
         switch (computerMove)
         {
             case "Scissors":
+                Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("You win.");
                 break;
             case "Rock":
+                Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine("This game was a draw.");
                 break;
             case "Paper":
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("You lose.");
                 break;
         }
@@ -57,12 +62,15 @@ switch (playerMove)
         switch (computerMove)
         {
             case "Rock":
+                Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("You win.");
                 break;
             case "Paper":
+                Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine("This game was a draw.");
                 break;
             case "Scissors":
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("You lose.");
                 break;
         }
@@ -71,14 +79,18 @@ switch (playerMove)
         switch (computerMove)
         {
             case "Paper":
+                Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("You win.");
                 break;
             case "Scissors":
+                Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine("This game was a draw.");
                 break;
             case "Rock":
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("You lose.");
                 break;
         }
         break;
 }
+Console.ResetColor();
